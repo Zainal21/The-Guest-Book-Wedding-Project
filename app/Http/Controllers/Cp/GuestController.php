@@ -9,7 +9,9 @@ class GuestController extends Controller
 {
     public function index()
     {
-        return view('Backend.Guest.index');
+        return view('Backend.Guest.index',[
+            'guests' => \App\Models\Guest::all()
+        ]);
     }
 
     public function create()

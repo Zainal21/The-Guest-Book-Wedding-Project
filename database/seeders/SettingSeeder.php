@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use DB;
 class SettingSeeder extends Seeder
 {
     /**
@@ -13,6 +13,9 @@ class SettingSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('setting')->insert([
+            'nama_website' => 'wedding_project',
+            'kode_analitic' => 'JKSHA0702432'
+        ]);
     }
 }

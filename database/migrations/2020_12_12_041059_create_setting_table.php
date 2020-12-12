@@ -15,6 +15,8 @@ class CreateSettingTable extends Migration
     {
         Schema::create('setting', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_website');
+            $table->string('kode_analitic');
             $table->timestamps();
         });
     }

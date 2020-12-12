@@ -15,6 +15,8 @@ class CreateMessageTable extends Migration
     {
         Schema::create('message', function (Blueprint $table) {
             $table->id();
+            $table->foreignID('guest_id');
+            $table->text('pesan');
             $table->timestamps();
         });
     }

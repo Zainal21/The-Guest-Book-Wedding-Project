@@ -13,8 +13,9 @@ class CreateMapsEmbedTable extends Migration
      */
     public function up()
     {
-        Schema::create('_maps_embed', function (Blueprint $table) {
+        Schema::create('maps_embed', function (Blueprint $table) {
             $table->id();
+            $table->string('embed_maps');
             $table->timestamps();
         });
     }
