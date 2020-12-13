@@ -9,6 +9,11 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('Backend.Dashboard');
+        return view('Backend.Dashboard',[
+            'guest' => \App\Models\Guest::count(),
+            'message' => \App\Models\Message::count(),
+            'event' => \App\Models\Event::count(),
+            'gallery' => \App\Models\Gallery::count()
+        ]); 
     }
 }

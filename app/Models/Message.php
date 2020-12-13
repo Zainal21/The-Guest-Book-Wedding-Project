@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Message extends Model
 {
     use HasFactory;
+    protected $table = 'message';
+    public function guest()
+    {
+        return $this->belongsTo(Guest::class, 'guest_id', 'id');
+    }
 }

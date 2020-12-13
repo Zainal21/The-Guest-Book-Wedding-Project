@@ -19,6 +19,7 @@ class CreateGuestTable extends Migration
             $table->string('email');
             $table->string('alamat');
             $table->string('acara_hadir');
+            $table->string('no_hp');
             $table->timestamps();
         });
     }

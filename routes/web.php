@@ -35,11 +35,15 @@ Route::group(
   Route::post('login', [AuthController::class, 'proccess_login'])->name('login.process');
   Route::get('admin', [DashboardController::class, 'index'])->name('home');
   Route::get('admin/guest', [GuestController::class,'index'])->name('guest.index');
-  Route::get('admin/event', [EventController::class, 'index']);
+  Route::get('admin/event', [EventController::class, 'index'])->name('event.index');
   Route::get('admin/message',[MessageController::class,'index']);
   // setting
   Route::get('admin/setting', [SettingController::class,'index']);
+  Route::put('admin/setting/1', [SettingController::class,'update']);
   // user
   Route::get('admin/maps', [EmbedController::class,'index']);
+  Route::post('admin/maps', [EmbedController::class,'save']);
   Route::get('admin/gallery',[GalleryController::class, 'index']);
+  Route::post('admin/gallery',[GalleryController::class, 'save']);
+  Route::delete('admin/gallery/{id}',[GalleryController::class, 'delete']);
 });

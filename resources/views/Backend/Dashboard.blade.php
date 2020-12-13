@@ -17,7 +17,7 @@
                   <h4>Guest Total</h4>
                 </div>
                 <div class="card-body">
-                  10
+                  {{$guest}}
                 </div>
               </div>
             </div>
@@ -32,7 +32,7 @@
                   <h4>Message</h4>
                 </div>
                 <div class="card-body">
-                  42
+                 {{$message}}
                 </div>
               </div>
             </div>
@@ -47,7 +47,7 @@
                   <h4>Event</h4>
                 </div>
                 <div class="card-body">
-                  1,201
+                  {{$event}}
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@
                   <h4>Gallery Photo</h4>
                 </div>
                 <div class="card-body">
-                  47
+                  {{$gallery}}
                 </div>
               </div>
             </div>

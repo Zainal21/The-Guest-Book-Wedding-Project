@@ -31,13 +31,14 @@
 </head>
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
 
-	<!-- LOADER -->
+	<!-- loader -->
     <div id="preloader">
 		<div class="preloader pulse">
 			<i class="fa fa-heartbeat" aria-hidden="true"></i>
 		</div>
-    </div><!-- end loader -->
-    <!-- END LOADER -->
+		</div>
+		<!-- end loader -->
+ 
 	
 	<!-- Start header -->
 	<header class="top-header">
@@ -64,7 +65,6 @@
 	</header>
 	<!-- End header -->
 	
-	
 	<!-- Start About us -->
 	<div id="about" class="about-box">
 		<div class="about-a1">
@@ -72,7 +72,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="title-box">
-							<h2>Leida <span>&</span> Dominic</h2>
+							<h2>Helmi Alfian <span>&</span> Yuyun Novitasari</h2>
 						</div>
 					</div>
 				</div>
@@ -80,24 +80,24 @@
 					<div class="col-lg-12 col-md-12 col-sm-12">
 						<div class="row align-items-center about-main-info">
 							<div class="col-lg-8 col-md-6 col-sm-12">
-								<h2> About <span>Leida</span></h2>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
+								<h2> Tentang <span>Helmi Alfian, S.ST.Pel</span></h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nihil nam blanditiis fuga minus veniam soluta vitae nisi eius. Aperiam laboriosam voluptatum iure blanditiis dolor accusamus porro saepe repellendus neque! </p>
 							</div>
 							<div class="col-lg-4 col-md-6 col-sm-12">
 								<div class="about-img">
-									<img class="img-fluid rounded" src="images/about-img-01.jpg" alt="" />
+								<img class="img-fluid rounded" src="{{asset('uploads/1.jpeg')}}" alt="" />
 								</div>
 							</div>
 						</div>
 						<div class="row align-items-center about-main-info">
 							<div class="col-lg-4 col-md-6 col-sm-12">
 								<div class="about-img">
-									<img class="img-fluid rounded" src="images/about-img-02.jpg" alt="" />
+									<img class="img-fluid rounded" src="{{asset('uploads/2.jpeg')}}" alt="" />
 								</div>
 							</div>
 							<div class="col-lg-8 col-md-6 col-sm-12">
-								<h2> About <span>Dominic</span></h2>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
+								<h2>Tentang <span>Yuyun Novitasari, S.Pd</span></h2>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae molestias pariatur ipsa hic suscipit minus. Provident sit corporis debitis tempore accusantium, veniam alias fugit vitae inventore pariatur, facere odit ullam! </p>
 							</div>
 						</div>
 					</div>
@@ -113,23 +113,22 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="title-box">
-						<h2>Our Story</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+						<h2>Cerita Kita</h2>
 					</div>
 				</div>
 			</div>
 			<div class="row timeline-element separline">
 				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
-                    <div class="time-line-date-content">
-                        <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            1 March 2018  
-                        </p>
-                    </div>
+						<div class="time-line-date-content">
+								<p class="mbr-timeline-date mbr-fonts-style display-font">
+										1 March 2018  
+								</p>
+						</div>
 				</div>
 				<span class="iconBackground"></span>
 				<div class="col-xs-12 col-md-6 align-left">
 					<div class="timeline-text-content">
-						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">First meet</h4>
+						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Pertemuan Pertama</h4>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
 						   We met at the wedding of our close friends and immediately found a common language, so a year later our first date happened.
 						</p>
@@ -138,16 +137,16 @@
 			</div>
 			<div class="row timeline-element reverse separline">
 				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
-                    <div class="time-line-date-content">
-                        <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            2 April 2018  
-                        </p>
-                    </div>
+							<div class="time-line-date-content">
+									<p class="mbr-timeline-date mbr-fonts-style display-font">
+											2 April 2018  
+									</p>
+							</div>
 				</div>
 				<span class="iconBackground"></span>
 				<div class="col-xs-12 col-md-6 align-right">
 					<div class="timeline-text-content">
-						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">First date</h4>
+						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Kencan Pertama</h4>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
 						   We met at the wedding of our close friends and immediately found a common language, so a year later our first date happened.
 						</p>
@@ -156,16 +155,16 @@
 			</div>
 			<div class="row timeline-element separline">
 				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
-                    <div class="time-line-date-content">
-                        <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            1 May 2018  
-                        </p>
-                    </div>
+						<div class="time-line-date-content">
+								<p class="mbr-timeline-date mbr-fonts-style display-font">
+										1 May 2020
+								</p>
+						</div>
 				</div>
 				<span class="iconBackground"></span>
 				<div class="col-xs-12 col-md-6 align-left">
 					<div class="timeline-text-content">
-						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Proposal</h4>
+						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Lamaran</h4>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
 						   Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit.
 						</p>
@@ -176,14 +175,14 @@
 				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
 						<div class="time-line-date-content">
 								<p class="mbr-timeline-date mbr-fonts-style display-font">
-										2 June 2018  
+										18 Descember 2020
 								</p>
 						</div>
 				</div>
 				<span class="iconBackground"></span>
 				<div class="col-xs-12 col-md-6 align-right">
 					<div class="timeline-text-content">
-						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Engagement</h4>
+						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Pernikahan</h4>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
 						   Proin tempus felis quis justo pretium interdum. Praesent sollicitudin lectus eu mattis egestas. Praesent luctus magna at dignissim placerat.
 						</p>
@@ -201,8 +200,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="title-box">
-						<h2>Events</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+						<h2>Acara</h2>
 					</div>
 				</div>
 			</div>
@@ -210,27 +208,30 @@
 				<div class="col-lg-4 col-md-6 col-sm-12">
 					<div class="event-inner">
 						<div class="event-img">
-							<img class="img-fluid" src="images/event-img-01.jpg" alt="" />
+						<img class="img-fluid" src="{{asset('uploads/event-img-01.jpg')}}" alt="" />
 						</div>
-						<h2>2 June 2018 Engagement</h2>
+						<h2>2 June 2018</h2>
+						<h2><strong>Wedding party</strong></h2>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-12">
 					<div class="event-inner">
 						<div class="event-img">
-							<img class="img-fluid" src="images/event-img-02.jpg" alt="" />
+						<img class="img-fluid" src="{{asset('uploads/gallery-04.jpg')}}" alt="" />
 						</div>
-						<h2>3 June 2018 Main Ceremony </h2>
+						<h2>3 June 2018 </h2>
+						<h2><strong>Main Ceremony</strong></h2>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-12">
 					<div class="event-inner">
 						<div class="event-img">
-							<img class="img-fluid" src="images/event-img-03.jpg" alt="" />
+						<img class="img-fluid" src="{{asset('uploads/gallery-05.jpg')}}" alt="" />
 						</div>
-						<h2>4 June 2018 Wedding party </h2>
+						<h2>3 June 2018 </h2>
+						<h2><strong>Main Ceremony</strong></h2>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
 					</div>
 				</div>
@@ -238,7 +239,6 @@
 		</div>
 	</div>
 	<!-- End Events -->
-
 		<!-- Start Contact -->
 		<div id="contact" class="contact-box">
 			<div class="container">
@@ -246,18 +246,18 @@
 					<div class="col-lg-12">
 						<div class="title-box">
 							<h2>Daftar kehadiran</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-sm-12 col-xs-12">
 						<div class="contact-block">
-						<form id="contactForm">
+						<form id="contactForm" class="form-group" method="POST" action="#">
+							@csrf
 							<div class="row">
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="text" class="form-control" id="name" name="name" placeholder="Masukkan Nama Anda" required data-error="Masukkan Nama Anda">
+									<input type="text" class="form-control" id="name" name="nama" placeholder="Masukkan Nama Anda" required data-error="Masukkan Nama Anda">
 									<div class="help-block with-errors"></div>
 								</div>                                 
 							</div>
@@ -310,8 +310,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="title-box">
-							<h2>Gallery</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							<h2>Galeri</h2>
 						</div>
 					</div>
 				</div>
@@ -370,7 +369,6 @@
 			</div>
 		</div>
 		<!-- End Gallery -->
-
 	<section class="map">
 			<div class="container">
 				<div class="row">

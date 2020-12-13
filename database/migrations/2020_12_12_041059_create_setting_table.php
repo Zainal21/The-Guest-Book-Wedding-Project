@@ -17,6 +17,7 @@ class CreateSettingTable extends Migration
             $table->id();
             $table->string('nama_website');
             $table->string('kode_analitic');
+            $table->string('logo');
             $table->timestamps();
         });
     }

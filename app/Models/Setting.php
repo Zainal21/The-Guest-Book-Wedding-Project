@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class Setting extends Model
 {
     use HasFactory;
-    protected $table = 'event';
+    protected $table = 'setting';
+    protected $fillable = ['nama_website', 'kode_analitic', 'logo'];
 }

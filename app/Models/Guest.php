@@ -9,4 +9,8 @@ class Guest extends Model
 {
     use HasFactory;
     protected $table = 'guest';
+    public function message()
+    {
+        return $this->hasMany(Message::class, 'guest_id', 'id');
+    }
 }

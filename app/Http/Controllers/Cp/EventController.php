@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Cp;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Event;
 
 class EventController extends Controller
 {
@@ -16,19 +17,29 @@ class EventController extends Controller
         return view('Backend.Event.create');
     }
 
-    public function store(Request $req)
+    public function save(Request $req, $id=false)
     {
+        $req->validate([
+            'nama_acara' => 'required',
+            'nama_acara' => 'required',
+            'nama_acara' => 'required',
+        ]);
+
+        if($id){
+            Event::where(['id' => $id])->update([
+
+            ]);
+            return redirect()->route('event.index')->with('status', 'Data Event Berhasil diperbarui');
+        }else{
+            Event::create([
+                            
+            ]);
+            return redirect()->route('event.index')->with('status', 'Data Event Berhasil ditambahkan');
+        }
+            
         // store to dababase
     }
-    public function destroy($id)
-    {
-        // delete from database
-    }
-
-    public function message()
-    {
-        return view('Backend.Message.index');
-    }
+    
 
 
 }

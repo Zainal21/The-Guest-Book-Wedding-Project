@@ -6,7 +6,9 @@
         <div class="section-header">
             <h1>Setting</h1>
         </div>
-        <form action="#" method="POST" enctype="multipart/form-data">
+    <form action="{{url('site/admin/setting/1')}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
             <div class="row">
                 <div class="col-8">
                     <div class="card">
@@ -16,11 +18,11 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="title">Nama website</label>
-                                <input type="text" id="title" class="form-control" name="title" autofocus="" value="">
+                            <input type="text" id="title" class="form-control" name="nama_website" autofocus="" value="{{$setting->nama_website}}"    required>
                             </div>
                             <div class="form-group">
                                 <label for="title">Kode Analitic Google</label>
-                                <input type="text" id="title" class="form-control" name="title" autofocus="" value="">
+                            <input type="text" id="title" class="form-control" name="kode_analitic" autofocus="" value="{{$setting->kode_analitic}}"   required>
                             </div>
                         </div>
                     </div>
@@ -34,13 +36,17 @@
                             <div class="form-group">
                                 <label>Logo Website</label>
                                 <div class="mb-2">
-                                    <img src="" class="img-fluid" alt="" id="upload-img-preview" style="display: none;">
+                                    <img src="" class="img-fluid" alt="" id="upload-img-preview" style="display: none;" required>
                                     <a href="#" class="text-danger" id="upload-img-delete" style="display: none;">Delete
                                         Logo Website Image</a>
                                 </div>
+                                <div class="mb-2">
+                                <img src="{{asset($setting->logo)}}" class="img-fluid" alt="" >
+                                        Logo Website Sebelumnya
+                                </div>
                                 <div class="custom-file">
-                                    <input type="file" accept="image/*" name="cover" id="cover"
-                                        class="custom-file-input js-upload-image form-control">
+                                    <input type="file" accept="image/*" name="logo" id="cover"
+                                        class="custom-file-input js-upload-image form-control" >
                                     <label class="custom-file-label " for="cover">Choose file</label>
                                 </div>
                             </div>

@@ -14,29 +14,4 @@ class GuestController extends Controller
         ]);
     }
 
-    public function create()
-    {
-        return view('Backend.Guest.create');
-    }
-
-
-    public function store(Request $req)
-    {
-        // store data to database
-    }
-
-    public function edit()
-    {
-        // show from edit Guest
-    }
-
-    public function update(Request $req, $id)
-    {
-        // update data  Guest
-    }
-
-    public function destroy($id)
-    {
-        // delete data Guest
-    }
 }
