@@ -711,7 +711,7 @@ button:focus{
 	border-radius: 3px;
 }
 
-.contact-block .form-group textarea.form-control{
+ textarea{
 	height: 150px;
 	padding-top: 15px;
 }

@@ -8,8 +8,8 @@
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
 
-    <title>Template Boilerplate</title>
-    {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
+    <title>Dashboard | Weeding Book</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -18,8 +18,6 @@
     <link rel="stylesheet" href="{{asset('Backend/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('Backend/css/components.css')}}">
     <link rel="stylesheet" href="{{asset('Backend/css/custom.css')}}">
-
-    {{-- @stack('style') --}}
 </head>
 
 <body>
@@ -39,18 +37,13 @@
                             <div class="d-sm-none d-lg-inline-block">Admin</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <!-- {{-- <div class="dropdown-title">Logged in 5 min ago</div> --}} -->
-                            <a href="#" target="_blank" class="dropdown-item has-icon">
+                            <a href="{{url('/')}}" target="_blank" class="dropdown-item has-icon">
                                 <i class="fas fa-external-link-alt"></i> View Site
                             </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item has-icon text-danger" href="#"
-                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                <i class="fas fa-sign-out-alt"></i> Logout
-                            </a>
-
-                            <form id="logout-form" action="#" method="POST" style="display: none;">
+                            <form action="{{route('logout.process')}}" method="post">
+                                @csrf
+                                <button class="dropdown-item has-icon text-danger"> <i
+                                        class="fas fa-sign-out-alt mt-2"></i> Logout</button>
                             </form>
                         </div>
                     </li>

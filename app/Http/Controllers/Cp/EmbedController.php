@@ -20,7 +20,6 @@ class EmbedController extends Controller
         Embed::where(['id' => 1])->update([
             'embed_maps' => $req->embed
         ]);
-        // DB::table('')->where(['id' => 1])->update();
         return redirect()->back()->with('status', 'Data Maps Embed Berhasil diperbarui');
     }
 }
