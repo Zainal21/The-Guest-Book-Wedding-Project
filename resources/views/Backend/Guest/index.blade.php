@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered" width="100%">
+                            <table class="table table-bordered" width="100%" id="TABLE_GUEST">
                                 <thead class="thead-light">
                                     <tr>
                                         <th class="thead">No</th>
@@ -22,7 +22,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($guests as $guest)
+                                    @foreach ($guests as $guest)
                                     <tr>
                                       <td>{{$loop->iteration}}</td>
                                     <td>{{$guest->email}}</td>
@@ -30,11 +30,7 @@
                                         <td>{{$guest->alamat}}</td>
                                         <td>{{$guest->acara_hadir}}</td>
                                     </tr>
-                                    @empty
-                                    <tr>
-                                        <td>Data Tidak ditemukan</td>
-                                    </tr>
-                                    @endforelse
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

@@ -10,13 +10,18 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                    <form action="{{url('site/admin/maps')}}" method="post">
-                      @csrf
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Embed Maps" name="embed">
-                            <button class="btn btn-primary my-2">Update</button>
-                        </div>
-                      </form>
+                        <form action="{{url('site/admin/maps')}}" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <input type="text" class="form-control @error('embed') @enderror" placeholder="Embed Maps" name="embed">
+                                @error('embed')
+                                <div id="validationServer03Feedback" class="invalid-feedback">
+                                    {{$message}}
+                                </div>
+                                @enderror
+                                <button class="btn btn-primary my-2">Update</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -26,7 +31,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered" width="100%">
+                            <table class="table table-bordered" width="100%" id="TABLE_MAPS">
                                 <thead class="thead-light">
                                     <tr>
                                         <th class="thead">No</th>
@@ -36,7 +41,7 @@
                                 <tbody>
                                     @foreach ($embed as $item)
                                     <tr>
-                                       <td>{{$loop->iteration}}</td>
+                                        <td>{{$loop->iteration}}</td>
                                         <td>{{$item->embed_maps}}</td>
                                     </tr>
                                     @endforeach

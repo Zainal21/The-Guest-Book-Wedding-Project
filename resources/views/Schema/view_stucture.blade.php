@@ -11,13 +11,21 @@
     <title>Dashboard | Weeding Book</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{asset('Backend/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('Backend/css/components.css')}}">
     <link rel="stylesheet" href="{{asset('Backend/css/custom.css')}}">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/v/bs4/dt-1.10.22/b-1.6.4/b-html5-1.6.4/r-2.2.6/datatables.min.css" />
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" />
 </head>
 
 <body>
@@ -27,13 +35,14 @@
             <nav class="navbar navbar-expand-lg main-navbar">
                 <form class="form-inline mr-auto">
                     <ul class="navbar-nav mr-3">
-                        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+                        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i
+                                    class="fas fa-bars"></i></a></li>
                     </ul>
                 </form>
                 <ul class="navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                        <img alt="image" src="{{asset('Backend/img/avatar.png')}}" class="rounded-circle mr-1">
+                            <img alt="image" src="{{asset('Backend/img/avatar.png')}}" class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block">Admin</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -60,34 +69,34 @@
                     <ul class="sidebar-menu">
                         <li class="menu-header">Dashboard</li>
                         <li class="#">
-                        <a class="nav-link" href="{{url('site/admin')}}">
+                            <a class="nav-link" href="{{url('site/admin')}}">
                                 <i class="fas fa-fire"></i><span>Dashboard</span>
                             </a>
                         </li>
                         <li class="menu-header">List</li>
                         <li class="#">
                             <a class="nav-link" href="{{route('guest.index')}}">
-                                <i class="fas fa-newspaper"></i> <span>Guest List</span>
+                                <i class="fas fa-user"></i> <span>Guest List</span>
                             </a>
                         </li>
                         <li class="#">
                             <a class="nav-link" href="{{url('site/admin/event')}}">
-                                <i class="far fa-paper-plane"></i> <span>Manage event time</span>
+                                <i class="fas fa-calendar"></i> <span>Manage event time</span>
                             </a>
                         </li>
                         <li class="#">
                             <a class="nav-link" href="{{url('site/admin/gallery')}}">
-                                <i class="far fa-paper-plane"></i> <span>Manage Gallery</span>
+                                <i class="fas fa-camera-retro"></i> <span>Manage Gallery</span>
                             </a>
                         </li>
                         <li class="#">
                             <a class="nav-link" href="{{url('site/admin/message')}}">
-                                <i class="far fa-paper-plane"></i> <span>Message list</span>
+                                <i class="fas fa-envelope"></i> <span>Message list</span>
                             </a>
                         </li>
                         <li class="#">
                             <a class="nav-link" href="{{url('site/admin/maps')}}">
-                                <i class="far fa-paper-plane"></i> <span>Embed Maps</span>
+                                <i class="fas fa-map-marker"></i> <span>Embed Maps</span>
                             </a>
                         </li>
 
@@ -101,7 +110,7 @@
                 </aside>
             </div>
 
-           @yield('Content')
+            @yield('Content')
             <footer class="main-footer">
                 <div class="footer-left">
                     Copyright &copy; 2020
@@ -112,28 +121,36 @@
     </div>
 
     <!-- General JS Scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="{{asset('Backend/js/stisla.js')}}"></script>
     <script src="{{asset('Backend/js/scripts.js')}}"></script>
     <script src="{{asset('Backend/js/ckeditor.js')}}"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
     {{-- <script>
+    </script> --}}
+    <script>
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-    </script> --}}
-    <script>
-        $('.js-upload-image').change(function(event) {
+        $('.js-upload-image').change(function (event) {
             makePreview(this);
             $('#upload-img-preview').show();
             $('#upload-img-delete').show();
         });
 
-        function makePreview(input){
+        function makePreview(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
@@ -143,7 +160,7 @@
             }
         }
 
-        $('#upload-img-delete').click(function(event) {
+        $('#upload-img-delete').click(function (event) {
             event.preventDefault();
 
             $('#upload-img-preview').attr('src', '').hide();
@@ -151,12 +168,31 @@
             $(this).hide();
         });
 
-      
+
         if ($('#description').length != 0) {
             CKEDITOR.replace('description', config);
         }
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        function DataTable(_table) {
+            $(document).ready(() => {
+                $(_table).DataTable();
+            });
+        }
+        DataTable('#TABLE_GUEST');
+        // DataTable('#TABLE_EV');
+        DataTable('#TABLE_MAPS');
+        DataTable('#TABLE_MESSAGE');
+        DataTable('#TABLE_GALLERY');
+        DataTable('#TABLE_EVENTS');
+
     </script>
-   
+
 </body>
 
 </html>
@@ -167,30 +203,30 @@
   //     height: '30em',
 
   //     filebrowserBrowseUrl: '{{ url('elfinder/ckeditor') }}',
-  //     filebrowserUploadUrl: '{{ route('cp.upload',['_token' => csrf_token()]) }}',
+// filebrowserUploadUrl: '{{ route('cp.upload',['_token' => csrf_token()]) }}',
 
-  //     stylesSet: [{
-  //         name: 'Narrow image',
-  //         type: 'widget',
-  //         widget: 'image',
-  //         attributes: {
-  //             'class': 'image-narrow'
-  //         }
-  //     },{
-  //         name: 'Wide image',
-  //         type: 'widget',
-  //         widget: 'image',
-  //         attributes: {
-  //             'class': 'image-wide'
-  //         }
-  //     }],
+// stylesSet: [{
+// name: 'Narrow image',
+// type: 'widget',
+// widget: 'image',
+// attributes: {
+// 'class': 'image-narrow'
+// }
+// },{
+// name: 'Wide image',
+// type: 'widget',
+// widget: 'image',
+// attributes: {
+// 'class': 'image-wide'
+// }
+// }],
 
-  //     contentsCss: [
-  //         'https://cdn.ckeditor.com/4.11.3/full-all/contents.css',
-  //     ],
+// contentsCss: [
+// 'https://cdn.ckeditor.com/4.11.3/full-all/contents.css',
+// ],
 
-  //     image2_alignClasses: ['image-align-left', 'image-align-center', 'image-align-right'],
-  //     image2_disableResizer: true,
-  //     removeDialogTabs: 'link:upload;image:upload',
-  //     allowedContent: true
-  // } --}}
+// image2_alignClasses: ['image-align-left', 'image-align-center', 'image-align-right'],
+// image2_disableResizer: true,
+// removeDialogTabs: 'link:upload;image:upload',
+// allowedContent: true
+// } --}}

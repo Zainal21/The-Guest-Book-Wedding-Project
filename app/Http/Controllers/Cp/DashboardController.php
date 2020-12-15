@@ -13,7 +13,9 @@ class DashboardController extends Controller
             'guest' => \App\Models\Guest::count(),
             'message' => \App\Models\Message::count(),
             'event' => \App\Models\Event::count(),
-            'gallery' => \App\Models\Gallery::count()
+            'gallery' => \App\Models\Gallery::count(),
+            'guests' => \App\Models\Guest::all(),
+            'message_list' => \App\Models\Message::with(['guest'])->get()
         ]); 
     }
 }

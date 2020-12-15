@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="custom-file">
                                     <input type="file" accept="image/*" name="image" id="cover"
-                                        class="custom-file-input js-upload-image form-control">
+                                        class="custom-file-input js-upload-image form-control" required>
                                     <label class="custom-file-label " for="cover">Choose file</label>
                                 </div>
                             </div>
@@ -44,10 +44,19 @@
         </div>
         <div class="row">
             <div class="col">
+                @if (session('status'))
+                <div class="alert alert-success">
+                    {{ session('status') }}
+                </div>
+                @endif
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered" width="100%">
+                            <table class="table table-bordered" width="100%" id="TABLE_GALLERY">
                                 <thead class="thead-light">
                                     <tr>
                                         <th class="thead">No</th>
@@ -59,7 +68,7 @@
                                     @forelse ($galleries as $galery)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                    <td><img src="{{asset($galery->photo)}}" width="80px" alt=""></td>
+                                        <td><img src="{{asset($galery->photo)}}" width="80px" alt=""></td>
                                         <td>
                                             <form action="{{url('site/admin/gallery/'. $galery->id)}}" method="post">
                                                 @csrf
@@ -72,7 +81,7 @@
                                     <tr>
                                         <td rowspan="3">Data Tidak Ditemukan</td>
                                     </tr>
-                                @endforelse
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>

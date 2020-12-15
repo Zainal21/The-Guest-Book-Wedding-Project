@@ -76,4 +76,10 @@ class EventController extends Controller
         ]);
         return redirect()->route('event.index')->with('status', 'Data Event Berhasil diperbarui');
     }
+    public function delete($id)
+    {
+        $_id = Crypt::decrypt($id);
+        Event::destroy($_id);
+        return redirect()->back()->with('status', 'Data Event Berhasil Dihapus');
+    }
 }

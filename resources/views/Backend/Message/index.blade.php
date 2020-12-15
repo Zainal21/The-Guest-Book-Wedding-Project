@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered" width="100%">
+                            <table class="table table-bordered" width="100%" id="TABLE_MESSAGE">
                                 <thead class="thead-light">
                                     <tr>
                                         <th class="thead">No</th>

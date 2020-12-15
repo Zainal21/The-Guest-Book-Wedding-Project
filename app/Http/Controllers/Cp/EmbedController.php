@@ -17,6 +17,9 @@ class EmbedController extends Controller
 
     public function save(Request $req)
     {
+        $req->validate([
+            'embed' => 'required|min:6'
+        ]);
         Embed::where(['id' => 1])->update([
             'embed_maps' => $req->embed
         ]);

@@ -42,6 +42,7 @@ Route::group(['prefix' => 'site'],function(){
   Route::post('admin/event/save', [EventController::class, 'save'])->name('event.store');
   Route::get('admin/event/edit/{id}', [EventController::class, 'edit'])->name('event.edit');
   Route::put('admin/event/update/{id}', [EventController::class, 'update'])->name('event.update');
+  Route::get('admin/event/delete/{id}', [EventController::class, 'delete'])->name('event.delete');
   // message
   Route::get('admin/message',[MessageController::class,'index']);
   // setting
