@@ -16,8 +16,8 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="images/f8a815e0-8b69-481c-9769-dc0b1c1ad05e_200x200.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/f8a815e0-8b69-481c-9769-dc0b1c1ad05e_200x200.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
@@ -47,7 +47,7 @@
     <header class="top-header">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" alt="image"></a>
+                <a class="navbar-brand" href="index.html"><img src="images/f8a815e0-8b69-481c-9769-dc0b1c1ad05e_200x200.png" width="160px" height="61" alt="image"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd"
                     aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
@@ -55,7 +55,7 @@
                     <span></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
-                    <ul class="navbar-nav mx-auto">
+                    <ul class="navbar-nav ml-auto">
                         <li><a class="nav-link active" href="#home">Beranda</a></li>
                         <li><a class="nav-link" href="#about">Tentang Kita</a></li>
                         <li><a class="nav-link" href="#story">Cerita KIta</a></li>
@@ -350,7 +350,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-12 my-4">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31641.46921221277!2d110.95354231720285!3d-7.554944151289999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1919258b0ddd%3A0x1712d2d9bbbf8788!2sKaliboto%2C%20Mojogedang%2C%20Kabupaten%20Karanganyar%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1608044968381!5m2!1sid!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe src="{{$embed_maps->embed_maps}}" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>

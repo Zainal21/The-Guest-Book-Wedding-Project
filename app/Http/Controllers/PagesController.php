@@ -10,7 +10,8 @@ class PagesController extends Controller
     {
         return view('Site.index',[
             'event' => \App\Models\Event::all(),
-            'gallery' => \App\Models\Gallery::all()
+            'gallery' => \App\Models\Gallery::all(),
+            'embed_maps' => \App\Models\Embed::findorfail(1),
         ]);
     }
     public function sendMessage(Request $req)
